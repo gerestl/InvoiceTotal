@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="30dp">
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:text="Subtotal"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <EditText
+            android:id="@+id/subtotalET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/subtotal"
+            android:layout_toEndOf="@+id/discountPercentLabel"
+            android:layout_toRightOf="@+id/discountPercentLabel"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="textEnd"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/discountPercentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="Discount Percent"
+            android:layout_below="@+id/subtotalET"
+            android:layout_alignLeft="@+id/subtotal"
+            android:layout_alignStart="@+id/subtotal" />
+
+        <TextView
+            android:id="@+id/discountPercentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:text="00%"
+            android:layout_above="@+id/discountAmountLabel"
+            android:layout_alignRight="@+id/subtotalET"
+            android:layout_alignEnd="@+id/subtotalET" />
+
+        <TextView
+            android:id="@+id/discountAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Discount Amount"
+            android:layout_below="@+id/discountPercentLabel"
+            android:layout_alignLeft="@+id/discountPercentLabel"
+            android:layout_alignStart="@+id/discountPercentLabel" />
+
+        <TextView
+            android:id="@+id/discountAmountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/discountAmountLabel"
+            android:layout_alignBottom="@+id/discountAmountLabel"
+            android:layout_alignEnd="@+id/discountPercentTV"
+            android:layout_alignRight="@+id/discountPercentTV"
+            android:background="@android:color/holo_orange_light"
+            android:text="$0.00" />
+
+        <TextView
+            android:id="@+id/totalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Total"
+            android:layout_below="@+id/discountAmountTV"
+            android:layout_alignLeft="@+id/discountAmountTV"
+            android:layout_alignStart="@+id/discountAmountLabel" />
+
+        <TextView
+            android:id="@+id/totalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/totalLabel"
+            android:layout_alignBottom="@+id/totalLabel"
+            android:layout_alignLeft="@+id/discountAmountTV"
+            android:layout_alignStart="@+id/discountAmountTV"
+            android:background="#7fa87f"
+            android:text="$0.00" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="Reset"
+            android:layout_below="@+id/totalTV"
+            android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
